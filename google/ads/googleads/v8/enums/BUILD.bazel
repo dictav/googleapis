@@ -43,6 +43,20 @@ java_proto_library(
 )
 
 ##############################################################################
+# Go
+##############################################################################
+load(
+    "@com_google_googleapis_imports//:imports.bzl",
+    "go_proto_library",
+)
+
+go_proto_library(
+    name = "enums_go_proto",
+    importpath = "google.golang.org/genproto/googleapis/ads/googleads/v8/enums",
+    protos = [":enums_proto"],
+)
+
+##############################################################################
 # PHP
 ##############################################################################
 
