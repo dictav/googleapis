@@ -71,6 +71,21 @@ java_grpc_library(
 )
 
 ##############################################################################
+# Go
+##############################################################################
+load(
+    "@com_google_googleapis_imports//:imports.bzl",
+    "go_proto_library",
+)
+
+go_proto_library(
+    name = "services_go_proto",
+    compilers = ["@io_bazel_rules_go//proto:go_grpc"],
+    importpath = "google.golang.org/genproto/googleapis/ads/googleads/v9/services",
+    protos = [":services_proto"],
+)
+
+##############################################################################
 # PHP
 ##############################################################################
 
